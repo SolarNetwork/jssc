@@ -35,4 +35,6 @@ target/
 *.iml
 
 # IDE files: eclipse
+.classpath
+.project
 .settings/
