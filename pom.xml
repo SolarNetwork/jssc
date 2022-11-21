@@ -61,6 +61,7 @@
     <plugin.animalsniffer.version>1.17</plugin.animalsniffer.version>
     <plugin.antrun.version>1.8</plugin.antrun.version>
     <plugin.assembly.version>3.1.1</plugin.assembly.version>
+    <plugin.bnd.version>6.3.1</plugin.bnd.version>
     <plugin.build-helper-maven-version>3.2.0</plugin.build-helper-maven-version>
     <plugin.compiler.version>3.8.0</plugin.compiler.version>
     <plugin.enforcer.version>3.0.0-M3</plugin.enforcer.version>
@@ -365,6 +366,38 @@
         </executions>
       </plugin>
 
+      <!-- OSGi support -->
+      <plugin>
+        <groupId>biz.aQute.bnd</groupId>
+        <artifactId>bnd-maven-plugin</artifactId>
+        <version>${plugin.bnd.version}</version>
+        <extensions>true</extensions>
+        <configuration>
+          <bnd><![CDATA[
+            Bundle-Version: ${project.version}.SN01
+            Export-Package: jssc
+            Bundle-NativeCode: \
+             natives/linux_32/libjssc.so; osname=Linux; processor=x86,\
+             natives/linux_64/libjssc.so; osname=Linux; processor=x86-64,\
+             natives/linux_arm/libjssc.so; osname=Linux; processor=arm,\
+             natives/linux_arm64/libjssc.so; osname=Linux; processor=arm64,\
+             natives/linux_ppc/libjssc.so; osname=Linux; processor=PowerPC,\
+             natives/osx_64/libjssc.dylib;  osname=Mac OS X; processor=x86-64,\
+             natives/osx_arm64/libjssc.dylib;  osname=Mac OS X; processor=arm64,\
+             natives/windows_32/jssc.dll; osname=Win32; processor=x86,\
+             natives/windows_64/jssc.dll; osname=Win32; processor=x86-64,\
+             natives/windows_arm64/jssc.dll; osname=Win32; processor=arm64
+          ]]></bnd>
+        </configuration>
+        <executions>
+          <execution>
+            <id>jar</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 
