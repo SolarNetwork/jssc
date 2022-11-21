@@ -6,7 +6,7 @@ A small, single Java library for working with serial ports across various system
 * [Download `.jar` manually](../../releases) or add using maven
 ```xml
 <dependency>
-    <groupId>io.github.java-native</groupId>
+    <groupId>net.solarnetwork.external</groupId>
     <artifactId>jssc</artifactId>
     <version>2.9.4</version>
 </dependency>
@@ -17,7 +17,7 @@ repositories {
     mavenCentral()
 }
 dependencies {
-    implementation("io.github.java-native:jssc:2.9.4")
+    implementation("net.solarnetwork.external:jssc:2.9.4")
 }
 ```
 * or Gradle (Groovy)
@@ -26,7 +26,7 @@ repositories {
     mavenCentral()
 }
 dependencies {
-    implementation 'io.github.java-native:jssc:2.9.4'
+    implementation 'net.solarnetwork.external:jssc:2.9.4'
 }
 ```
 * [API code examples](../../wiki/examples)

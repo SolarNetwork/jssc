@@ -8,7 +8,7 @@ on:
 
 env:
   MAVEN_OPTS: -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
-  JAVA_TOOL_OPTIONS: -Duser.name=io.github.java-native
+  JAVA_TOOL_OPTIONS: -Duser.name=net.solarnetwork.external
   GITHUB_BOT_NAME: github-actions
   GITHUB_BOT_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
 
