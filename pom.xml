@@ -78,11 +78,6 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.scijava</groupId>
-      <artifactId>native-lib-loader</artifactId>
-      <version>${dependency.nativelibloader.version}</version>
-    </dependency>
-    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>${dependency.junit.version}</version>
